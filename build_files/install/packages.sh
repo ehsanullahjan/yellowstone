@@ -19,6 +19,7 @@ INCLUDED_PACKAGES=(
 	nmap
 	nvtop
 	ripgrep
+	rsync
 	socat
 	tealdeer
 	tmux
