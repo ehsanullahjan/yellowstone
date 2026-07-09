@@ -5,12 +5,12 @@ on:
     branches:
       - main
   schedule:
-    - cron: "05 10 * * 2" # 10:05am UTC every Tuesday
+    - cron: '05 10 * * 2'  # 10:05am UTC every Tuesday
   push:
     branches:
       - main
     paths-ignore:
-      - "**/README.md"
+      - '**/README.md'
   workflow_dispatch:
 
 env:
@@ -85,12 +85,12 @@ jobs:
       # If you are feeling adventurous, use the new distro agnostic rechunker
       # https://github.com/coreos/chunkah
       # You can delete the Rechunk with rpm-ostree portion then if you use this
-      #- name: Rechunk with Chunkah
-      #  id: rechunk
-      #  run: |
-      #    sudo -E $(command -v just) rechunk \
-      #      ${IMAGE_NAME} \
-      #      ${DEFAULT_TAG}
+      # - name: Rechunk with Chunkah
+      #   id: rechunk
+      #   run: |
+      #     sudo -E $(command -v just) rechunk \
+      #       ${IMAGE_NAME} \
+      #       ${DEFAULT_TAG}
 
       - name: Generate Build Tags
         id: gen-build-tags
@@ -147,7 +147,7 @@ jobs:
         if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
         # https://github.com/containers/container-libs/issues/388
         with:
-          cosign-release: "v2.6.3"
+          cosign-release: 'v2.6.3'
 
       - name: Sign container image
         id: sign-image
@@ -155,6 +155,7 @@ jobs:
         env:
           COSIGN_EXPERIMENTAL: false
           COSIGN_PRIVATE_KEY: ${{ secrets.SIGNING_SECRET }}
+          COSIGN_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
           DIGEST: ${{ steps.push-image.outputs.digest }}
         run: |
           cosign sign -y --key env://COSIGN_PRIVATE_KEY ${IMAGE_REGISTRY}/${IMAGE_NAME}@${DIGEST}
