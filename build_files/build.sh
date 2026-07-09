@@ -4,5 +4,7 @@ set -ouex pipefail
 
 rsync -rvK /ctx/system_files/ /
 
+/ctx/build_files/install/rocm.sh
+/ctx/build_files/install/rpmfusion.sh
 
 
