@@ -11,6 +11,7 @@ set -ouex pipefail
 /ctx/build_files/install/podman.sh
 /ctx/build_files/install/libvirt.sh
 
+/ctx/build_files/install/cockpit.sh
 /ctx/build_files/install/network.sh
 /ctx/build_files/install/tailscale.sh
 
