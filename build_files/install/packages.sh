@@ -6,7 +6,6 @@ INCLUDED_PACKAGES=(
 	bat
 	btop
 	distrobox
-	et
 	eza
 	fastfetch
 	fd-find
@@ -14,13 +13,8 @@ INCLUDED_PACKAGES=(
 	grc
 	lm_sensors
 	lshw
-	mosh
-	ngrep
-	nmap
 	nvtop
 	ripgrep
-	rsync
-	socat
 	tealdeer
 	tmux
 	trash-cli
@@ -29,5 +23,3 @@ INCLUDED_PACKAGES=(
 	zsh
 )
 dnf -y install "${INCLUDED_PACKAGES[@]}"
-
-systemctl enable et.service
