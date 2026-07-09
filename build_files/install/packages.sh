@@ -10,6 +10,7 @@ INCLUDED_PACKAGES=(
 	fastfetch
 	fd-find
 	fzf
+	glibc-langpack-en
 	grc
 	lm_sensors
 	lshw
