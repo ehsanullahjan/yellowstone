@@ -1,0 +1,36 @@
+{
+  "default": [
+    {
+      "type": "reject"
+    }
+  ],
+  "transports": {
+    "containers-storage": {
+      "": [{ "type": "insecureAcceptAnything" }]
+    },
+    "docker-daemon": {
+      "": [{ "type": "insecureAcceptAnything" }]
+    },
+    "docker": {
+      "ghcr.io/ehsanullahjan/silverstone": [
+        {
+          "type": "sigstoreSigned",
+          "keyPath": "/etc/pki/containers/yellowstone.pub",
+          "signedIdentity": {
+            "type": "matchRepository"
+          }
+        }
+      ],
+      "docker.io": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ],
+      "quay.io": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ]
+    }
+  }
+}
