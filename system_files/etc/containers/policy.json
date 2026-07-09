@@ -12,7 +12,7 @@
       "": [{ "type": "insecureAcceptAnything" }]
     },
     "docker": {
-      "ghcr.io/ehsanullahjan/silverstone": [
+      "ghcr.io/ehsanullahjan/yellowstone": [
         {
           "type": "sigstoreSigned",
           "keyPath": "/etc/pki/containers/yellowstone.pub",
