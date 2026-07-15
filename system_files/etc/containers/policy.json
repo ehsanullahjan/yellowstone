@@ -12,6 +12,16 @@
       "": [{ "type": "insecureAcceptAnything" }]
     },
     "docker": {
+      "docker.io": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ],
+      "ghcr.io": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ],
       "ghcr.io/ehsanullahjan/yellowstone": [
         {
           "type": "sigstoreSigned",
@@ -19,11 +29,6 @@
           "signedIdentity": {
             "type": "matchRepository"
           }
-        }
-      ],
-      "docker.io": [
-        {
-          "type": "insecureAcceptAnything"
         }
       ],
       "quay.io": [
