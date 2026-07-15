@@ -2,6 +2,11 @@
 
 set -ouex pipefail
 
+EXCLUDED_PACKAGES=(
+	toolbox
+)
+dnf -y remove "${EXCLUDED_PACKAGES[@]}"
+
 INCLUDED_PACKAGES=(
 	bat
 	btop
