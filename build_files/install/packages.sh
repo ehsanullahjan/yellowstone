@@ -12,8 +12,6 @@ INCLUDED_PACKAGES=(
 	fzf
 	glibc-langpack-en
 	grc
-	lm_sensors
-	lshw
 	nvtop
 	ripgrep
 	tealdeer
