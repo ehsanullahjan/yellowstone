@@ -13,3 +13,4 @@ INCLUDED_PACKAGES=(
 dnf -y install "${INCLUDED_PACKAGES[@]}"
 
 systemctl enable cockpit.socket
+firewall-offline-cmd --service=cockpit
