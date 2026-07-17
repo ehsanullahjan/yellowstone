@@ -8,3 +8,4 @@ INCLUDED_PACKAGES=(
 )
 dnf -y install "${INCLUDED_PACKAGES[@]}"
 
+firewall-offline-cmd --service=dhcpv6-client
