@@ -1,4 +1,6 @@
-set -ouex pipefail
+#!/bin/bash
+
+set -euxo pipefail
 
 INCLUDED_PACKAGES=(
 	terminus-fonts-console
