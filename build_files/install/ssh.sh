@@ -2,12 +2,7 @@
 
 set -euxo pipefail
 
-INCLUDED_PACKAGES=(
-	et
-	mosh
-	openssh-server
-)
-dnf -y install "${INCLUDED_PACKAGES[@]}"
+dnf -y install et mosh openssh-server
 
 systemctl enable sshd.service
 firewall-offline-cmd --service=ssh
