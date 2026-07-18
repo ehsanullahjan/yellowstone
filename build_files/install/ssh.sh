@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ouex pipefail
+set -euxo pipefail
 
 INCLUDED_PACKAGES=(
 	et
