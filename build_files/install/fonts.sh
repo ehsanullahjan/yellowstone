@@ -2,7 +2,4 @@
 
 set -euxo pipefail
 
-INCLUDED_PACKAGES=(
-	terminus-fonts-console
-)
-dnf -y install "${INCLUDED_PACKAGES[@]}"
+dnf -y install terminus-fonts-console
