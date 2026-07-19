@@ -9,7 +9,6 @@ dnf -y remove "${EXCLUDED_PACKAGES[@]}"
 
 INCLUDED_PACKAGES=(
 	bat
-	btop
 	distrobox
 	eza
 	fastfetch
@@ -17,7 +16,6 @@ INCLUDED_PACKAGES=(
 	fzf
 	glibc-langpack-en
 	grc
-	nvtop
 	ripgrep
 	tealdeer
 	tmux
