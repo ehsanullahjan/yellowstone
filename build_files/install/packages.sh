@@ -9,7 +9,10 @@ dnf -y remove "${EXCLUDED_PACKAGES[@]}"
 
 INCLUDED_PACKAGES=(
 	bat
+	carapace
+	chafa
 	distrobox
+	dysk
 	eza
 	fastfetch
 	fd-find
@@ -17,10 +20,13 @@ INCLUDED_PACKAGES=(
 	glibc-langpack-en
 	grc
 	ripgrep
+	starship
 	tealdeer
+	terminus-fonts-console
 	tmux
 	trash-cli
 	vim
+	yazi
 	zoxide
 	zsh
 )
