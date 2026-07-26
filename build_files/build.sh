@@ -5,7 +5,7 @@ set -euxo pipefail
 /ctx/build_files/pre-build.sh
 
 /ctx/build_files/install/amd-hwe.sh
-/ctx/build_files/install/rpmfusion.sh
+/ctx/build_files/install/multimedia.sh
 
 /ctx/build_files/install/firewall.sh
 /ctx/build_files/install/wifi.sh
