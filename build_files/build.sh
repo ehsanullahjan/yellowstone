@@ -9,7 +9,7 @@ set -euxo pipefail
 
 /ctx/build_files/install/firewall.sh
 /ctx/build_files/install/wifi.sh
-/ctx/build_files/install/ssh.sh
+/ctx/build_files/install/network.sh
 /ctx/build_files/install/vpn.sh
 
 /ctx/build_files/install/cockpit.sh
