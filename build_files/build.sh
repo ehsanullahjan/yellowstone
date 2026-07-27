@@ -9,6 +9,8 @@ set -euxo pipefail
 /ctx/build_files/install/multimedia.sh
 
 /ctx/build_files/install/power-mgmt.sh
+/ctx/build_files/install/sysmon.sh
+/ctx/build_files/install/systools.sh
 
 /ctx/build_files/install/firewall.sh
 /ctx/build_files/install/network.sh
@@ -16,7 +18,6 @@ set -euxo pipefail
 
 /ctx/build_files/install/cockpit.sh
 /ctx/build_files/install/perf-copilot.sh
-/ctx/build_files/install/sysmon.sh
 
 /ctx/build_files/install/docker.sh
 /ctx/build_files/install/podman.sh
