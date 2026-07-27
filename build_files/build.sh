@@ -22,5 +22,6 @@ set -euxo pipefail
 
 /ctx/build_files/install/git.sh
 /ctx/build_files/install/packages.sh
+/ctx/build_files/install/yazi.sh
 
 /ctx/build_files/post-build.sh

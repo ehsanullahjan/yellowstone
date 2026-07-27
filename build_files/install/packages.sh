@@ -10,7 +10,6 @@ dnf -y remove "${EXCLUDED_PACKAGES[@]}"
 INCLUDED_PACKAGES=(
 	bat
 	carapace
-	chafa
 	distrobox
 	dysk
 	eza
@@ -26,7 +25,6 @@ INCLUDED_PACKAGES=(
 	tmux
 	trash-cli
 	vim
-	yazi
 	zoxide
 	zsh
 )
