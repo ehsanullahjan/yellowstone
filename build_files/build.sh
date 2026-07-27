@@ -4,8 +4,8 @@ set -euxo pipefail
 
 /ctx/build_files/pre-build.sh
 
-/ctx/build_files/install/amd-hwer.sh
-/ctx/build_files/install/wifi-hwer.sh
+/ctx/build_files/install/amd-hwe.sh
+/ctx/build_files/install/wifi-hwe.sh
 /ctx/build_files/install/multimedia.sh
 
 /ctx/build_files/install/firewall.sh
