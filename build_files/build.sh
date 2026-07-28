@@ -9,7 +9,7 @@ set -euxo pipefail
 /ctx/build_files/install/multimedia.sh
 
 /ctx/build_files/install/power-mgmt.sh
-/ctx/build_files/install/sysmon.sh
+/ctx/build_files/install/montools.sh
 /ctx/build_files/install/systools.sh
 
 /ctx/build_files/install/firewall.sh
