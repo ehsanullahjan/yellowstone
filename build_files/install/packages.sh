@@ -9,6 +9,7 @@ dnf -y remove "${EXCLUDED_PACKAGES[@]}"
 
 INCLUDED_PACKAGES=(
 	bat
+	borgbackup
 	carapace
 	distrobox
 	dysk
