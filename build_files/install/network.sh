@@ -2,12 +2,9 @@
 
 set -euxo pipefail
 
-dnf -y install et mosh nfs-client-utils openssh-server
+dnf -y install mosh nfs-client-utils openssh-server
 
 systemctl enable sshd.service
 firewall-offline-cmd --service=ssh
-
-systemctl enable et.service
-firewall-offline-cmd --service=et
 
 firewall-offline-cmd --service=mosh
