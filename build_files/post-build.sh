@@ -5,6 +5,5 @@ set -euxo pipefail
 # Sync shadow files
 pwconv && grpconv
 
-# Disable terra repos
+# Disable main terra repo
 dnf config-manager setopt terra.enabled=0
-dnf config-manager setopt terra-mesa.enabled=0
