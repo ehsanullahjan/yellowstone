@@ -29,4 +29,4 @@ INCLUDED_PACKAGES=(
 	zoxide
 	zsh
 )
-dnf -y install "${INCLUDED_PACKAGES[@]}"
+dnf -y --enable-repo terra install "${INCLUDED_PACKAGES[@]}"
