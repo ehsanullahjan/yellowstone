@@ -5,12 +5,12 @@ on:
     branches:
       - main
   schedule:
-    - cron: "05 10 * * 2" # 10:05am UTC every Tuesday
+    - cron: '05 10 * * 2'  # 10:05am UTC every Tuesday
   push:
     branches:
       - main
     paths-ignore:
-      - "**/README.md"
+      - '**/README.md'
   workflow_dispatch:
 
 env:
@@ -23,7 +23,7 @@ concurrency:
 jobs:
   build_push:
     name: Build and push image
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
 
     permissions:
       contents: read
@@ -85,12 +85,12 @@ jobs:
       # If you are feeling adventurous, use the new distro agnostic rechunker
       # https://github.com/coreos/chunkah
       # You can delete the Rechunk with rpm-ostree portion then if you use this
-      # - name: Rechunk with Chunkah
-      #   id: rechunk
-      #   run: |
-      #     just rechunk \
-      #       ${IMAGE_NAME} \
-      #       ${DEFAULT_TAG}
+      #- name: Rechunk with Chunkah
+      #  id: rechunk
+      #  run: |
+      #    just rechunk \
+      #      ${IMAGE_NAME} \
+      #      ${DEFAULT_TAG}
 
       - name: Generate Build Tags
         id: gen-build-tags
@@ -145,10 +145,9 @@ jobs:
       - name: Install Cosign
         uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
         if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
-        # https://github.com/containers/container-libs/issues/388
         with:
           # be careful when upgrading major versions
-          cosign-release: "v3.1.2"
+          cosign-release: 'v3.1.2'
 
       - name: Sign container image
         id: sign-image
@@ -163,3 +162,4 @@ jobs:
           # https://github.com/coreos/rpm-ostree/issues/5509
           # use old bundle format, so we can use newer cosign 3.X.X instead of 2.X.X
           cosign sign -y --new-bundle-format=false --use-signing-config=false --key env://COSIGN_PRIVATE_KEY ${IMAGE_REGISTRY}/${IMAGE_NAME}@${DIGEST}
+
