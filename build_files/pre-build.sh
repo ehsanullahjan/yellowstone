@@ -5,9 +5,11 @@ set -euxo pipefail
 # Enable dnf config-manager
 dnf -y install 'dnf5-command(config-manager)'
 
-# Copy custom configs
+# Install pre-reqs
 dnf -y install rsync
-rsync -rvK /ctx/system_files/ /
+
+# Copy custom configs
+rsync -rvK --exclude=.gitkeep /ctx/system_files/pre-build/ /
 
 # Install terra repo with online gpgkey (instead of file://). This workaround for
 # https://github.com/osbuild/bootc-image-builder/issues/1188 unblocks ISO builds.
