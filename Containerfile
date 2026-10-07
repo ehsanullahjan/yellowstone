@@ -1,5 +1,5 @@
-ARG BASE_IMAGE_NAME="fedora-bootc"
-ARG FEDORA_MAJOR_VERSION="44"
+ARG FEDORA_IMAGE_NAME="fedora-bootc"
+ARG FEDORA_IMAGE_VERSION="44"
 
 # Allow build and config files to be referenced without being copied into the final image
 FROM scratch AS ctx
@@ -7,7 +7,7 @@ COPY build_files /build_files
 COPY system_files /system_files
 
 # Base Image
-FROM quay.io/fedora/${BASE_IMAGE_NAME}:${FEDORA_MAJOR_VERSION}
+FROM quay.io/fedora/${FEDORA_IMAGE_NAME}:${FEDORA_IMAGE_VERSION}
 
 ### [IM]MUTABLE /opt
 ## Some bootable images, like Fedora, have /opt symlinked to /var/opt, in order to
