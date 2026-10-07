@@ -10,6 +10,7 @@ dnf -y remove "${EXCLUDED_PACKAGES[@]}"
 INCLUDED_PACKAGES=(
 	bat
 	carapace
+	chezmoi
 	distrobox
 	dysk
 	eza
