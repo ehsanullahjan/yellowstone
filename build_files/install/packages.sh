@@ -11,6 +11,7 @@ INCLUDED_PACKAGES=(
 	bat
 	carapace
 	chezmoi
+	darkman
 	distrobox
 	dysk
 	eza
