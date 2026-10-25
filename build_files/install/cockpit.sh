@@ -2,7 +2,7 @@
 
 set -euxo pipefail
 
-dnf -y install \
+dnf -y --setopt=install_weak_deps=False install \
 	cockpit \
 	cockpit-machines \
 	cockpit-networkmanager \
