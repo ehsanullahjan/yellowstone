@@ -1,5 +1,5 @@
 ARG FEDORA_IMAGE_NAME="fedora-bootc"
-ARG FEDORA_IMAGE_VERSION="44"
+ARG FEDORA_IMAGE_VERSION="45"
 
 # Allow build and config files to be referenced without being copied into the final image
 FROM scratch AS ctx
