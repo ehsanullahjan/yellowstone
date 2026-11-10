@@ -11,4 +11,3 @@ dnf -y --setopt=install_weak_deps=False install \
 	cockpit-storaged
 
 systemctl enable cockpit.socket
-firewall-offline-cmd --service=cockpit
