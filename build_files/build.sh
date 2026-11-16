@@ -6,7 +6,7 @@ set -euxo pipefail
 
 /ctx/build_files/install/gpu.sh
 /ctx/build_files/install/wifi-hwe.sh
-/ctx/build_files/install/multimedia.sh
+/ctx/build_files/install/codecs.sh
 
 /ctx/build_files/install/greenboot.sh
 /ctx/build_files/install/power-mgmt.sh
