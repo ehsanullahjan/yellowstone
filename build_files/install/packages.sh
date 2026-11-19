@@ -22,7 +22,6 @@ INCLUDED_PACKAGES=(
 	grc
 	ripgrep
 	starship
-	tldr
 	terminus-fonts-console
 	tmux
 	trash-cli
