@@ -2,4 +2,4 @@
 
 set -euxo pipefail
 
-dnf -y install @virtualization-headless guestfs-tools bcvk
+dnf -y install @virtualization-headless guestfs-tools
